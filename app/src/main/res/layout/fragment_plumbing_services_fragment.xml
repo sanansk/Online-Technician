@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".plumbing_services_fragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/appcolor"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:title="Plumbing Services"
+                app:titleTextColor="@color/white"
+                tools:ignore="MissingConstraints">
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <ImageView
+                android:id="@+id/plumber_dashboard_img"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:srcCompat="@drawable/plumber_dashboard_img"
+                tools:ignore="ContentDescription" />
+
+            <!--    First menu-->
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:background="@color/appcolor"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/plumber_dashboard_img">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/plumb_installation_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/plumb_ser_installation_img"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            app:srcCompat="@drawable/plumb_ser_installation_img"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/plumb_installation_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/plumb_ser_installation_img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text="New System Install"
+                            android:textColor="@color/appcolor"
+                            android:textSize="18dp"
+                            tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/plumb_repair_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/plumb_ser_repair_img"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            app:srcCompat="@drawable/plumb_ser_repair_img"
+                            tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/plumb_repair_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/plumb_ser_repair_img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text="Old System Repair"
+                            android:textColor="@color/appcolor"
+                            android:textSize="18dp"
+                            tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!--    Second menu-->
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:background="@color/appcolor"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/plumb_sewerline_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/plumb_ser_sewerline_img"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            app:srcCompat="@drawable/plumb_ser_sewerline_img"
+                            tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/plumb_sewerline_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/plumb_ser_sewerline_img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text="Sewer line repair"
+                            android:textColor="@color/appcolor"
+                            android:textSize="18dp"
+                            tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/plumb_waterheater_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/plumb_ser_waterheater_img"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            app:srcCompat="@drawable/plumb_ser_waterheater_img"
+                            tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/plumb_waterheater_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/plumb_ser_waterheater_img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text="Water heater install"
+                            android:textColor="@color/appcolor"
+                            android:textSize="18dp"
+                            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!--    Third menu-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:background="@color/appcolor"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/plumb_fixtures_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/plumb_ser_fixture_img"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            app:srcCompat="@drawable/plumb_ser_fixture_img"
+                            tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/plumb_fixtures_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/plumb_ser_fixture_img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text="Fixture installation"
+                            android:textColor="@color/appcolor"
+                            android:textSize="18dp"
+                            tools:ignore="HardcodedText,SpUsage" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/plumb_gasline_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/plumb_ser_gasline_img"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            app:srcCompat="@drawable/plumb_ser_gasline_img"
+                            tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/plumb_gasline_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/plumb_ser_gasline_img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text="Gas-line installation"
+                            android:textColor="@color/appcolor"
+                            android:textSize="18dp"
+                            tools:ignore="HardcodedText,SpUsage" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>

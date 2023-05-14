@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item android:title="@string/available_technician">
+
+            <menu>
+                <item
+                    android:id="@+id/ac_technician_menu"
+                    android:icon="@drawable/technician_vector"
+                    android:title="@string/ac_tech_menu_item" />
+
+                <item
+                    android:id="@+id/fridge_technician_menu"
+                    android:icon="@drawable/technician_vector"
+                    android:title="@string/fridge_tech_menu_item" />
+
+                <item
+                    android:id="@+id/laptop_technician_menu"
+                    android:icon="@drawable/technician_vector"
+                    android:title="@string/laptop_tech_menu_item" />
+
+                <item
+                    android:id="@+id/comp_technician_menu"
+                    android:icon="@drawable/technician_vector"
+                    android:title="@string/comp_tech_menu_item" />
+
+                <item
+                    android:id="@+id/mobile_technician_menu"
+                    android:icon="@drawable/technician_vector"
+                    android:title="@string/mobile_tech_menu_item" />
+
+                <item
+                    android:id="@+id/multi_technician_menu"
+                    android:icon="@drawable/technician_vector"
+                    android:title="@string/multi_tech_menu_item" />
+
+                <item
+                    android:id="@+id/plumb_technician_menu"
+                    android:icon="@drawable/technician_vector"
+                    android:title="@string/plumb_tech_menu_item" />
+
+                <item
+                    android:id="@+id/wm_technician_menu"
+                    android:icon="@drawable/technician_vector"
+                    android:title="@string/wm_tech_menu_item" />
+            </menu>
+
+        </item>
+
+    </group>
+
+    <item android:title="@string/technician_registration">
+
+        <menu>
+            <item
+                android:id="@+id/register_tech_menu"
+                android:icon="@drawable/register_tech_vector"
+                android:title="@string/register_as_technician"/>
+        </menu>
+
+    </item>
+    <group android:checkableBehavior="single">
+
+        <item android:title="@string/check_timer">
+            <menu>
+                <item
+                    android:id="@+id/start_time_menu"
+                    android:icon="@drawable/start_time_vector"
+                    android:title="@string/timer"/>
+            </menu>
+        </item>
+    </group>
+
+        <item android:title="@string/log_out">
+
+            <menu>
+                <item
+                    android:id="@+id/logOut_menu"
+                    android:icon="@drawable/logout_vector"
+                    android:title="@string/logout"/>
+
+                <item
+                    android:id="@+id/delete_account_menu"
+                    android:icon="@drawable/delete_account_vector"
+                    android:title="@string/delete_account"/>
+            </menu>
+
+        </item>
+
+
+</menu>

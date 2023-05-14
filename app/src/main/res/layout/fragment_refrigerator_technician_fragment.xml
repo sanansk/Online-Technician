@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".refrigerator_technician_fragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/fridge_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/appcolor"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Refrigerator Technicians"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                tools:ignore="MissingConstraints,TextContrastCheck">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/fridge_tech_dashboard_img"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fridge_toolbar"
+                app:srcCompat="@drawable/fridge_tech_dashboard_img"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+            <!--    First menu-->
+
+            <LinearLayout
+                android:id="@+id/fridge_linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/appcolor"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fridge_tech_dashboard_img">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fridge_technician1_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/white"
+                    tools:ignore="InefficientWeight">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:id="@+id/fridge_technician1.txt1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:fontFamily="@font/oswald_bold"
+                            android:gravity="center"
+                            android:text="Naseer Cool Point"
+                            android:textColor="@color/shop_name_color"
+                            android:textSize="22dp"
+                            tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                        <LinearLayout
+                            android:id="@+id/fridge_technician1.main_section1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fridge_technician1.txt1"
+                            tools:ignore="ExtraText">
+
+                            <ImageView
+                                android:id="@+id/fridge_technician1_img"
+                                android:layout_width="125dp"
+                                android:layout_height="147dp"
+                                android:layout_marginStart="4dp"
+                                app:srcCompat="@drawable/ac_tech1_img"
+                                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/fridge_technician1.txt2"
+                                    android:layout_width="226dp"
+                                    android:layout_height="110dp"
+                                    android:layout_marginStart="3dp"
+                                    android:layout_marginEnd="25dp"
+                                    android:fontFamily="@font/oswald_bold"
+                                    android:gravity="center"
+                                    android:text="Gernail Chownk, Vehari"
+                                    android:textColor="@color/shop_address_color"
+                                    android:textSize="18dp"
+                                    tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                                <TextView
+                                    android:id="@+id/fridge_technician1.txt3"
+                                    android:layout_width="226dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="3dp"
+                                    android:layout_marginEnd="25dp"
+                                    android:fontFamily="@font/oswald_bold"
+                                    android:gravity="center"
+                                    android:text="M. Noman Arshad"
+                                    android:textColor="@color/appcolor"
+                                    android:textSize="20dp"
+                                    tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/fridge_phone_call1_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fridge_technician1.main_section1"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/fridge_technician1.txt4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/oswald_bold"
+                                android:gravity="center"
+                                android:text="Contact us: +92309-3112522"
+                                android:textColor="@color/phone_number_color"
+                                android:textSize="18dp"
+                                tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                            <Button
+                                android:id="@+id/fridge_call_btn1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="8dp"
+                                android:background="@color/call_btn"
+                                android:text="Call Now"
+                                android:textColor="@color/call_btn_txt"
+                                android:textStyle="bold"
+                                tools:ignore="TouchTargetSizeCheck" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/fridge_whatsapp_chat1_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fridge_phone_call1_layout"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/fridge_whatsapp_technician1.txt5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/oswald_bold"
+                                android:gravity="center"
+                                android:text="Whatsapp us: +92307-8781017"
+                                android:textColor="@color/phone_number_color"
+                                android:textIsSelectable="true"
+                                android:textSize="18dp"
+                                tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck,TouchTargetSizeCheck" />
+
+                            <Button
+                                android:id="@+id/fridge_whatsapp_chat_btn1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="8dp"
+                                android:background="@color/whatsapp_btn_color"
+                                android:text="Whatsapp"
+                                android:textColor="@color/whatsapp_txt_color"
+                                android:textStyle="bold"
+                                tools:ignore="TouchTargetSizeCheck" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/fridge_alert_txt1_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fridge_whatsapp_chat1_layout"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/fridge_alert_img1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/alert_vector" />
+
+                            <TextView
+                                android:id="@+id/fridge_technician1.txt6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/oswald_bold"
+                                android:gravity="center"
+                                android:text="Please save number to contacts, for whatsapp."
+                                android:textColor="@color/phone_number_color"
+                                android:textSize="14dp"
+                                tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/start_service_btn1_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fridge_alert_txt1_layout"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            tools:ignore="DuplicateIds">
+
+                            <Button
+                                android:id="@+id/fridge_start_service_btn1"
+                                android:layout_width="match_parent"
+                                android:layout_height="36dp"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/btnshape"
+                                android:backgroundTint="#509fd7"
+                                android:fontFamily="@font/oswald_bold"
+                                android:text="Start Service"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                app:layout_constraintHorizontal_bias="0.495"
+                                tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize,TouchTargetSizeCheck"
+                                tools:visibility="visible" />
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!--    Second menu-->
+            <LinearLayout
+                android:id="@+id/fridge_linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/appcolor"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fridge_linearLayout1">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fridge_technician2_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/white"
+                    tools:ignore="InefficientWeight">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/fridge_technician2.txt1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:fontFamily="@font/oswald_bold"
+                            android:gravity="center"
+                            android:text="Bin-Ashraf Cool Point"
+                            android:textColor="@color/shop_name_color"
+                            android:textSize="24dp"
+                            tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                        <LinearLayout
+                            android:id="@+id/fridge_technician2.main_section1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fridge_technician2.txt1"
+                            tools:ignore="ExtraText">
+
+                            <ImageView
+                                android:id="@+id/fridge_technician2_img"
+                                android:layout_width="125dp"
+                                android:layout_height="147dp"
+                                android:layout_marginStart="4dp"
+                                app:srcCompat="@drawable/ac_tech2_img"
+                                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/fridge_technician2.txt2"
+                                    android:layout_width="226dp"
+                                    android:layout_height="110dp"
+                                    android:layout_marginEnd="25dp"
+                                    android:fontFamily="@font/oswald_bold"
+                                    android:gravity="center"
+                                    android:text="32-Quatar Road Near Allied School, Vehari"
+                                    android:textColor="@color/shop_address_color"
+                                    android:textSize="18dp"
+                                    tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                                <TextView
+                                    android:id="@+id/fridge_technician2.txt3"
+                                    android:layout_width="226dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="3dp"
+                                    android:layout_marginEnd="25dp"
+                                    android:fontFamily="@font/oswald_bold"
+                                    android:gravity="center"
+                                    android:text="Fiaz Hussain"
+                                    android:textColor="@color/appcolor"
+                                    android:textSize="20dp"
+                                    tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/fridge_phone_call2_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fridge_technician2.main_section1"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/fridge_technician2.txt4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/oswald_bold"
+                                android:gravity="center"
+                                android:text="Contact us: +92304-6809155"
+                                android:textColor="@color/phone_number_color"
+                                android:textSize="18dp"
+                                tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                            <Button
+                                android:id="@+id/fridge_call_btn2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="8dp"
+                                android:background="@color/call_btn"
+                                android:text="Call Now"
+                                android:textColor="@color/call_btn_txt"
+                                android:textStyle="bold"
+                                tools:ignore="TouchTargetSizeCheck" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/fridge_whatsapp_chat2_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fridge_phone_call2_layout"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/fridge_whatsapp_technician2.txt5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/oswald_bold"
+                                android:gravity="center"
+                                android:text="Whatsapp us: +92304-6809155"
+                                android:textColor="@color/phone_number_color"
+                                android:textIsSelectable="true"
+                                android:textSize="18dp"
+                                tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck,TouchTargetSizeCheck" />
+
+                            <Button
+                                android:id="@+id/fridge_whatsapp_chat_btn2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="8dp"
+                                android:background="@color/whatsapp_btn_color"
+                                android:text="Whatsapp"
+                                android:textColor="@color/whatsapp_txt_color"
+                                android:textStyle="bold"
+                                tools:ignore="TouchTargetSizeCheck" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/fridge_alret_txt2_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fridge_whatsapp_chat2_layout"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/fridge_alret_img2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/alert_vector" />
+
+                            <TextView
+                                android:id="@+id/fridge_technician2.txt6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/oswald_bold"
+                                android:gravity="center"
+                                android:text="Please save number to contacts, for whatsapp."
+                                android:textColor="@color/phone_number_color"
+                                android:textSize="14dp"
+                                tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/start_service_btn2_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fridge_alret_txt2_layout"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            tools:ignore="DuplicateIds">
+
+                            <Button
+                                android:id="@+id/fridge_start_service_btn2"
+                                android:layout_width="match_parent"
+                                android:layout_height="36dp"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginRight="24dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/btnshape"
+                                android:backgroundTint="#509fd7"
+                                android:fontFamily="@font/oswald_bold"
+                                android:text="Start Service"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                app:layout_constraintHorizontal_bias="0.495"
+                                tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize,TouchTargetSizeCheck"
+                                tools:visibility="visible" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>
+

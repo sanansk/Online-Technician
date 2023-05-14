@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "618020092871",
+    "firebase_url": "https://doorstep-technician-default-rtdb.firebaseio.com",
+    "project_id": "doorstep-technician",
+    "storage_bucket": "doorstep-technician.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618020092871:android:e6a33a68d001e2ea1677e2",
+        "android_client_info": {
+          "package_name": "com.example.doorsteptechnician"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "618020092871-t5i32du7j5mkth42j875s99dr0uud9s5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJyNrcC0wauJh7FerKy1es0brGnsaBpvU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "618020092871-t5i32du7j5mkth42j875s99dr0uud9s5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

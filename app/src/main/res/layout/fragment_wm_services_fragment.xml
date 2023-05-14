@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".wm_services_fragment">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <androidx.appcompat.widget.Toolbar
+               android:id="@+id/toolbar"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@color/appcolor"
+               android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+               app:title="Washing Machine Services"
+               app:titleTextColor="@color/white"
+               tools:ignore="MissingConstraints">
+
+           </androidx.appcompat.widget.Toolbar>
+
+           <ImageView
+               android:id="@+id/wm_dashboard_img"
+               android:layout_width="match_parent"
+               android:layout_height="160dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/toolbar"
+               app:srcCompat="@drawable/wm_dashboard_img"
+               tools:ignore="ContentDescription" />
+
+           <!--    First menu-->
+
+           <LinearLayout
+               android:id="@+id/linearLayout"
+               android:layout_width="match_parent"
+               android:layout_height="175dp"
+               android:background="@color/appcolor"
+               android:orientation="horizontal"
+               android:padding="5dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintHorizontal_bias="0.0"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/wm_dashboard_img">
+
+               <androidx.cardview.widget.CardView
+                   android:id="@+id/wm_control_card"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_margin="10dp"
+                   android:layout_weight="1"
+                   app:cardBackgroundColor="@color/white">
+
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent">
+
+                       <ImageView
+                           android:id="@+id/wm_ser_control_board_img"
+                           android:layout_width="100dp"
+                           android:layout_height="100dp"
+                           android:layout_centerHorizontal="true"
+                           android:layout_marginTop="2dp"
+                           app:srcCompat="@drawable/wm_ser_control_board_img"
+                           tools:ignore="ContentDescription" />
+
+                       <TextView
+                           android:id="@+id/wm_control_txt"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_below="@id/wm_ser_control_board_img"
+                           android:layout_centerHorizontal="true"
+                           android:layout_marginTop="6dp"
+                           android:fontFamily="@font/oswald_bold"
+                           android:text="Control Board Repair"
+                           android:textColor="@color/appcolor"
+                           android:textSize="17dp"
+                           tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                   </RelativeLayout>
+               </androidx.cardview.widget.CardView>
+
+               <androidx.cardview.widget.CardView
+                   android:id="@+id/wm_drum_card"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_margin="10dp"
+                   android:layout_weight="1"
+                   app:cardBackgroundColor="@color/white">
+
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent">
+
+                       <ImageView
+                           android:id="@+id/wm_ser_drum_img"
+                           android:layout_width="100dp"
+                           android:layout_height="100dp"
+                           android:layout_centerHorizontal="true"
+                           app:srcCompat="@drawable/wm_ser_drum_img"
+                           tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                       <TextView
+                           android:id="@+id/wm_drum_txt"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_below="@id/wm_ser_drum_img"
+                           android:layout_centerHorizontal="true"
+                           android:layout_marginTop="7dp"
+                           android:fontFamily="@font/oswald_bold"
+                           android:text="Drum Repair"
+                           android:textColor="@color/appcolor"
+                           android:textSize="18dp"
+                           tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                   </RelativeLayout>
+               </androidx.cardview.widget.CardView>
+           </LinearLayout>
+
+           <!--    Second menu-->
+
+           <LinearLayout
+               android:id="@+id/linearLayout2"
+               android:layout_width="match_parent"
+               android:layout_height="175dp"
+               android:background="@color/appcolor"
+               android:orientation="horizontal"
+               android:padding="5dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintHorizontal_bias="0.0"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+               <androidx.cardview.widget.CardView
+                   android:id="@+id/wm_pump_card"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_margin="10dp"
+                   android:layout_weight="1"
+                   app:cardBackgroundColor="@color/white">
+
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent">
+
+                       <ImageView
+                           android:id="@+id/wm_ser_pump_img"
+                           android:layout_width="100dp"
+                           android:layout_height="100dp"
+                           android:layout_centerHorizontal="true"
+                           app:srcCompat="@drawable/wm_ser_pump_img"
+                           tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                       <TextView
+                           android:id="@+id/wm_pump_txt"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_below="@id/wm_ser_pump_img"
+                           android:layout_centerHorizontal="true"
+                           android:layout_marginTop="7dp"
+                           android:fontFamily="@font/oswald_bold"
+                           android:text="Pump Repair"
+                           android:textColor="@color/appcolor"
+                           android:textSize="18dp"
+                           tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                   </RelativeLayout>
+               </androidx.cardview.widget.CardView>
+
+               <androidx.cardview.widget.CardView
+                   android:id="@+id/wm_belt_card"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_margin="10dp"
+                   android:layout_weight="1"
+                   app:cardBackgroundColor="@color/white">
+
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent">
+
+                       <ImageView
+                           android:id="@+id/wm_ser_belt_img"
+                           android:layout_width="100dp"
+                           android:layout_height="100dp"
+                           android:layout_centerHorizontal="true"
+                           app:srcCompat="@drawable/wm_ser_belt_img"
+                           tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                       <TextView
+                           android:id="@+id/wm_belt_txt"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_below="@id/wm_ser_belt_img"
+                           android:layout_centerHorizontal="true"
+                           android:layout_marginTop="7dp"
+                           android:fontFamily="@font/oswald_bold"
+                           android:text="Belt Replacement"
+                           android:textColor="@color/appcolor"
+                           android:textSize="18dp"
+                           tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+                   </RelativeLayout>
+               </androidx.cardview.widget.CardView>
+           </LinearLayout>
+
+           <!--    Third menu-->
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="175dp"
+               android:background="@color/appcolor"
+               android:orientation="horizontal"
+               android:padding="5dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintHorizontal_bias="0.0"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+               <androidx.cardview.widget.CardView
+                   android:id="@+id/wm_drain_card"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_margin="10dp"
+                   android:layout_weight="1"
+                   app:cardBackgroundColor="@color/white">
+
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent">
+
+                       <ImageView
+                           android:id="@+id/wm_ser_drainhose_img"
+                           android:layout_width="100dp"
+                           android:layout_height="100dp"
+                           android:layout_centerHorizontal="true"
+                           app:srcCompat="@drawable/wm_ser_drainhose_img"
+                           tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                       <TextView
+                           android:id="@+id/wm_drain_txt"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_below="@id/wm_ser_drainhose_img"
+                           android:layout_centerHorizontal="true"
+                           android:layout_marginTop="7dp"
+                           android:fontFamily="@font/oswald_bold"
+                           android:text="Drain Hose Repair"
+                           android:textColor="@color/appcolor"
+                           android:textSize="18dp"
+                           tools:ignore="HardcodedText,SpUsage" />
+
+                   </RelativeLayout>
+               </androidx.cardview.widget.CardView>
+
+               <androidx.cardview.widget.CardView
+                   android:id="@+id/wm_inlet_valve_card"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_margin="10dp"
+                   android:layout_weight="1"
+                   app:cardBackgroundColor="@color/white">
+
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent">
+
+                       <ImageView
+                           android:id="@+id/wm_ser_inlet_valve_img"
+                           android:layout_width="100dp"
+                           android:layout_height="100dp"
+                           android:layout_centerHorizontal="true"
+                           app:srcCompat="@drawable/wm_ser_inlet_valve_img"
+                           tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                       <TextView
+                           android:id="@+id/wm_inlet_valve_txt"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_below="@id/wm_ser_inlet_valve_img"
+                           android:layout_centerHorizontal="true"
+                           android:layout_marginTop="7dp"
+                           android:fontFamily="@font/oswald_bold"
+                           android:text="Inlet Valve Repair"
+                           android:textColor="@color/appcolor"
+                           android:textSize="18dp"
+                           tools:ignore="HardcodedText,SpUsage" />
+
+                   </RelativeLayout>
+               </androidx.cardview.widget.CardView>
+           </LinearLayout>
+
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

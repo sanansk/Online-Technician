@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Doorstep Technician</string>
+
+    <string name="navigation_open">Open Navigation Drawer</string>
+    <string name="navigation_close">Close Navigation Drawer</string>
+    <string name="todo">TODO</string>
+    <string name="online_technician">Online Technician</string>
+    <string name="welcome_to">Welcome to</string>
+
+    <!--    Menu Items-->
+    <string name="dashboard_tech_menu_item">Dashboard</string>
+    <string name="available_technician">Available Technician</string>
+    <string name="ac_tech_menu_item">Air Conditioning Technicians</string>
+    <string name="laptop_tech_menu_item">Laptop Technicians</string>
+    <string name="comp_tech_menu_item">Computer Technicians</string>
+    <string name="mobile_tech_menu_item">Mobile Technicians</string>
+    <string name="multi_tech_menu_item">Multimedia Technicians</string>
+    <string name="plumb_tech_menu_item">Plumbing Technicians</string>
+    <string name="fridge_tech_menu_item">Refrigerator Technicians</string>
+    <string name="wm_tech_menu_item">WM Technicians</string>
+    <string name="check_timer">Check Timer</string>
+    <string name="start_timer">Start Timer</string>
+    <string name="end_timer">End Timer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="timer">Timer Dashboard</string>
+    <string name="log_out">Account Options</string>
+    <string name="logout">LogOut</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="register_as_technician">Register as Technician</string>
+    <string name="technician_registration">Technician Registration</string>
+
+    <string name="register_technician_text"><br><b>Dear Technician,\n</b></br>
+<br> Thank you for your interest in joining our platform as a technician.\n</br>
+<br> In order to proceed with your registration, please provide us with the following details:\n</br>
+        <br>1. Shop Name:\n</br>
+        <br>2. Shop Address:\n</br>
+        <br>3. Your Full Name:\n</br>
+        <br>4. Contact Number: &amp; WhatsApp Number:\n</br>
+        <br>5. Image of Technician:\n</br>
+<br> Thank you for considering our platform for your business. We will review it and get back to you as soon as possible.\n</br>
+        <br><b>Best regards,</b> Admin: Online Technician Application</br></string>
+    <string name="multimedia_technicians">Multimedia Technicians</string>
+    <!--    Menu Items-->
+
+</resources>

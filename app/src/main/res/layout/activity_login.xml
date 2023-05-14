@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_image"
+    tools:context=".Login">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/login_image"
+            android:layout_width="550dp"
+            android:layout_height="350dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/app_logo"
+            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck" />
+
+        <EditText
+            android:id="@+id/loginemail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/login_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/sign_upedit"
+            android:drawableLeft="@drawable/signup_email"
+            android:drawablePadding="10dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/appcolor"
+            android:textColorHint="@color/appcolor"
+            android:textSize="16dp"
+            tools:ignore="Autofill,HardcodedText,MissingConstraints,RtlHardcoded,RtlSymmetry,SpUsage,TextFields,TextSizeCheck,TextContrastCheck,VisualLintTextFieldSize" />
+
+        <EditText
+            android:id="@+id/loginpaswrd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/loginemail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/sign_upedit"
+            android:drawableLeft="@drawable/signup_key"
+            android:drawableRight="@drawable/password_off"
+            android:drawablePadding="10dp"
+            android:hint="Password"
+            android:inputType="numberPassword"
+            android:paddingLeft="5dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/appcolor"
+            android:textColorHint="@color/appcolor"
+            android:textSize="16dp"
+            tools:ignore="Autofill,HardcodedText,MissingConstraints,RtlHardcoded,RtlSymmetry,SpUsage,TextFields,TextSizeCheck,TextContrastCheck,VisualLintTextFieldSize" />
+
+        <TextView
+            android:id="@+id/forgetpassw"
+            android:layout_width="236dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/loginpaswrd"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="125dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/abril_fatface"
+            android:text="Forgot Your Password?"
+            android:textColor="#FF0000"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+        <Button
+            android:id="@+id/loginbtn"
+            android:layout_width="336dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/forgetpassw"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/btnshape"
+            android:backgroundTint="#509fd7"
+            android:fontFamily="@font/oswald_bold"
+            android:text="Log in"
+            android:textColor="@color/white"
+            android:textFontWeight="800"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText,UnusedAttribute,TextSizeCheck,TextContrastCheck,VisualLintButtonSize"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginbtn"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/logintxt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/loginbtn"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/oswald_bold"
+                android:text="Don't have an account?"
+                android:textColor="@color/appcolor"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="HardcodedText,TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/logintxt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/loginbtn"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/oswald_bold"
+                android:text="Sign up"
+                android:textColor="#FF0000"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

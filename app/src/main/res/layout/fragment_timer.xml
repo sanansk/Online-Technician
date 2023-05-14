@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_image"
+    tools:context=".timer">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="SpeakableTextPresentCheck,UselessParent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ScrollViewSize">
+
+
+            <ImageView
+                android:id="@+id/clock_circle"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:layout_gravity="center"
+                android:src="@drawable/sk_clock"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="ContentDescription,MissingConstraints"
+                tools:layout_editor_absoluteY="22dp" />
+
+            <ImageView
+                android:id="@+id/clock_minute_hand"
+                android:layout_width="272dp"
+                android:layout_height="80dp"
+                android:src="@drawable/clock_minute_hand"
+                app:layout_constraintBottom_toBottomOf="@+id/clock_circle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.500"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/clock_circle"
+                app:layout_constraintVertical_bias="0.355"
+                tools:ignore="ContentDescription,MissingConstraints" />
+
+            <Chronometer
+                android:id="@+id/chronometer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/appcolor"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clock_circle"
+                tools:ignore="TextContrastCheck" />
+
+            <Button
+                android:id="@+id/start_task"
+                android:layout_width="310dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/chronometer"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/btnshape"
+                android:backgroundTint="@color/appcolor"
+                android:fontFamily="@font/oswald_bold"
+                android:text="Start Task"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chronometer"
+                tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize,TextSizeCheck"
+                tools:visibility="visible" />
+
+            <Button
+                android:id="@+id/end_task"
+                android:layout_width="310dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/chronometer"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btnshape"
+                android:backgroundTint="#FF769A"
+                android:fontFamily="@font/oswald_bold"
+                android:text="End Task"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/start_task"
+                tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize,TextSizeCheck"
+                tools:visibility="visible" />
+
+            <Button
+                android:id="@+id/complete_task"
+                android:layout_width="310dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/chronometer"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btnshape"
+                android:backgroundTint="#008080"
+                android:fontFamily="@font/oswald_bold"
+                android:text="Task Completed"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/end_task"
+                tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize,TextSizeCheck"
+                tools:visibility="visible" />
+
+            <Button
+                android:id="@+id/cancel_service"
+                android:layout_width="310dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/end_task"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="124dp"
+                android:background="@drawable/btnshape"
+                android:backgroundTint="#FF0000"
+                android:fontFamily="@font/oswald_bold"
+                android:text="Cancel Service"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/start_task"
+                tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize,TextSizeCheck"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

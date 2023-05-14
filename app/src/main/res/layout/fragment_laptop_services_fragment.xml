@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".laptop_services_fragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/appcolor"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:title="Laptop Services"
+                app:titleTextColor="@color/white"
+                tools:ignore="MissingConstraints">
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <ImageView
+                android:id="@+id/laptop_dashboard_img"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:srcCompat="@drawable/laptop_dashboard_img"
+                tools:ignore="ContentDescription" />
+
+            <!--    First menu-->
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:background="@color/appcolor"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/laptop_dashboard_img">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/laptop_screen_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/laptop_ser_screen_repair_img"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            app:srcCompat="@drawable/laptop_ser_screen_repair_img"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/laptop_screen_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/laptop_ser_screen_repair_img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text="Screen Repair"
+                            android:textColor="@color/appcolor"
+                            android:textSize="18dp"
+                            tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/laptop_motherboard_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/laptop_ser_motherboard_img"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            app:srcCompat="@drawable/laptop_ser_motherboard_img"
+                            tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/laptop_motherboard_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/laptop_ser_motherboard_img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text="Motherboard Repair"
+                            android:textColor="@color/appcolor"
+                            android:textSize="18dp"
+                            tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!--    Second menu-->
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:background="@color/appcolor"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/laptop_hard_ram_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/laptop_ser_ram_hard_img"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            app:srcCompat="@drawable/laptop_ser_ram_hard_img"
+                            tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/laptop_hard_ram_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/laptop_ser_ram_hard_img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text="Hard-Ram Upgrade"
+                            android:textColor="@color/appcolor"
+                            android:textSize="18dp"
+                            tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/laptop_power_jack_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/laptop_ser_power_img"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            app:srcCompat="@drawable/laptop_ser_power_img"
+                            tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/laptop_power_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/laptop_ser_power_img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text="Power Jack Repair"
+                            android:textColor="@color/appcolor"
+                            android:textSize="18dp"
+                            tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!--    Third menu-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:background="@color/appcolor"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/laptop_fan_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/laptop_ser_fan_img"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            app:srcCompat="@drawable/laptop_ser_fan_img"
+                            tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/laptop_fan_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/laptop_ser_fan_img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text="Fan Replacement"
+                            android:textColor="@color/appcolor"
+                            android:textSize="18dp"
+                            tools:ignore="HardcodedText,SpUsage" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/laptop_cyber_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/laptop_ser_cyber_img"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            app:srcCompat="@drawable/laptop_ser_cyber_img"
+                            tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/laptop_cyber_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/laptop_ser_cyber_img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="@font/oswald_bold"
+                            android:text="Cyber security"
+                            android:textColor="@color/appcolor"
+                            android:textSize="18dp"
+                            tools:ignore="HardcodedText,SpUsage" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>

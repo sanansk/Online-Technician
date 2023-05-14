@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".dashboard_fragment"
+    android:background="@drawable/bg_image">
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/appcolor"-->
+<!--            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+<!--            app:title="Online Technician Dashboard"-->
+<!--            app:titleTextColor="@color/white"-->
+<!--            tools:ignore="MissingConstraints">-->
+
+<!--        </androidx.appcompat.widget.Toolbar>-->
+
+
+        <TextView
+            android:id="@+id/txtavailabe"
+            android:layout_width="187dp"
+            android:layout_height="128dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/oswald_bold"
+            android:text="Ease To Access Online Technician Services"
+            android:textColor="@color/appcolor"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/home_side_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText,MissingConstraints,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+        <ImageView
+            android:id="@+id/home_side_logo"
+            android:layout_width="145dp"
+            android:layout_height="146dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtavailabe"
+            app:srcCompat="@drawable/side_bar_image"
+            tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck" />
+
+        <!--        first menu-->
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:background="@color/appcolor"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_side_logo">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ac_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/ac_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/ac_image"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/ac_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ac_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:fontFamily="@font/oswald_bold"
+                        android:text="AC Service"
+                        android:textColor="@color/appcolor"
+                        android:textSize="18dp"
+                        tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fridge_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/fridge_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/fridge_image"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/fridge_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/fridge_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:fontFamily="@font/oswald_bold"
+                        android:text="Refrigerator Service"
+                        android:textColor="@color/appcolor"
+                        android:textSize="18dp"
+                        tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!--        Second menu-->
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:background="@color/appcolor"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/laptop_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/laptop_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/lap_comp_image"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <TextView
+                        android:id="@+id/lap_comp_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/laptop_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:fontFamily="@font/oswald_bold"
+                        android:text="Laptop Service"
+                        android:textColor="@color/appcolor"
+                        android:textSize="18dp"
+                        tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/computer_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/computer_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/comp_image"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <TextView
+                        android:id="@+id/computer_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/computer_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:fontFamily="@font/oswald_bold"
+                        android:text="Computer Service"
+                        android:textColor="@color/appcolor"
+                        android:textSize="18dp"
+                        tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!--        Third menu-->
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:background="@color/appcolor"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mobile_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/mobile_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/mobile_image"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <TextView
+                        android:id="@+id/mobile_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mobile_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:fontFamily="@font/oswald_bold"
+                        android:text="Mobile Service"
+                        android:textColor="@color/appcolor"
+                        android:textSize="18dp"
+                        tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/multimedia_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/mulmedia_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/multimedia_image"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <TextView
+                        android:id="@+id/multimedia_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mulmedia_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:fontFamily="@font/oswald_bold"
+                        android:text="Multimedia Service"
+                        android:textColor="@color/appcolor"
+                        android:textSize="18dp"
+                        tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!--    Forth menu-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:background="@color/appcolor"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+            tools:ignore="VisualLintBounds">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/plumbing_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/plumber_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/plumb_image"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <TextView
+                        android:id="@+id/plumber_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/plumber_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:fontFamily="@font/oswald_bold"
+                        android:text="Plumbing Service"
+                        android:textColor="@color/appcolor"
+                        android:textSize="18dp"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/wm_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/wm_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/wm_image"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <TextView
+                        android:id="@+id/wm_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wm_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:fontFamily="@font/oswald_bold"
+                        android:text="WM. Service"
+                        android:textColor="@color/appcolor"
+                        android:textSize="18dp"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
+
+</FrameLayout>
