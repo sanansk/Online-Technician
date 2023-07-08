@@ -31,7 +31,7 @@ public class dashboard extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView1;
     FirebaseAuth mAuth;
-
+    public static final String SHARED_PREFS= "sharedPrefs";
 
     @SuppressLint({"MissingInflatedId", "NonConstantResourceId"})
     @Override
@@ -111,7 +111,8 @@ public class dashboard extends AppCompatActivity {
                         break;
                     ////
                     case R.id.register_tech_menu:
-                        fragment(new tech_register_fragment());
+                        Intent intent= new Intent(dashboard.this, Technician_register.class);
+                        startActivity(intent);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         Toast.makeText(dashboard.this, "Technician Registration", Toast.LENGTH_SHORT).show();
                         break;
@@ -129,8 +130,13 @@ public class dashboard extends AppCompatActivity {
                             builder.setPositiveButton("LogOut", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    FirebaseAuth.getInstance().signOut();
+                                    //
+                                    SharedPreferences sharedPreferences= getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+                                    SharedPreferences.Editor editor= sharedPreferences.edit();
+                                    editor.clear();
+                                    editor.commit();
                                     finish();
+                                    //
                                     Toast.makeText(dashboard.this, "LogOut Successfully", Toast.LENGTH_SHORT).show();
                                     Intent go_to_login=new Intent(getApplicationContext(), Login.class);
                                     startActivity(go_to_login);
@@ -150,20 +156,6 @@ public class dashboard extends AppCompatActivity {
             }
         });
     }
-
-//    @Override
-//    public void onBackPressed() {
-//        new AlertDialog.Builder(this)
-//                .setMessage("Are you sure, you want to exit?")
-//                .setCancelable(false)
-//                .setPositiveButton("Yes", new DialogInterface.OnClickListener(){
-//
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//                finish();
-//            }
-//        }).setNegativeButton("No", null).show();
-//    }
 
     private void fragment(Fragment fragment){
         FragmentManager fragmentManager= getSupportFragmentManager();

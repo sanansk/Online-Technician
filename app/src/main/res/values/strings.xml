@@ -41,6 +41,7 @@
 <br> Thank you for considering our platform for your business. We will review it and get back to you as soon as possible.\n</br>
         <br><b>Best regards,</b> Admin: Online Technician Application</br></string>
     <string name="multimedia_technicians">Multimedia Technicians</string>
+    <string name="upload_your_own_image_while_working">Upload Technician Working Image</string>
     <!--    Menu Items-->
 
 </resources>

@@ -12,10 +12,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Welcome extends AppCompatActivity {
-    TextView wlcmlogintxt;
- TextView wlcmtxt1;
+    TextView wlcmlogintxt,wlcmtxt1,wlcmtxt3;
  ImageView wlcmimage;
- TextView wlcmtxt3;
 
     public static final String SHARED_PREFS= "sharedPrefs";
 

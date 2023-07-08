@@ -29,8 +29,6 @@ public class ac_technician_fragment extends Fragment {
     private static int SPLASH_SCREEN = 3000;
     Button ac_call_btn1, ac_call_btn2, ac_whatsapp_chat_btn1, ac_whatsapp_chat_btn2;
     Button ac_start_service_btn1, ac_start_service_btn2;
-    TextView ac_toolbar;
-    Animation side_animation;
 
     public ac_technician_fragment() {
         // Required empty public constructor
@@ -57,11 +55,6 @@ public class ac_technician_fragment extends Fragment {
 
         ac_start_service_btn1=callView.findViewById(R.id.ac_start_service_btn1);
         ac_start_service_btn2=callView.findViewById(R.id.ac_start_service_btn2);
-
-        ac_toolbar= callView.findViewById(R.id.ac_toolbar);
-        side_animation= AnimationUtils.loadAnimation(getActivity(),R.anim.side_animation);
-        ac_toolbar.setAnimation(side_animation);
-
         ac_call_btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,18 +67,30 @@ public class ac_technician_fragment extends Fragment {
                 makePhoneCall2();
             }
         });
+
+//      Whatsapp Intent
         ac_whatsapp_chat_btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onWhatsappChat1();
+                String wpurl= "https://wa.me/+923078781017?text=Hi, I need this service. Service Name: here";
+                Intent intent= new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(wpurl));
+                startActivity(intent);
             }
         });
         ac_whatsapp_chat_btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onWhatsappChat2();
+                String wpurl= "https://wa.me/+923046809155?text=Hi, I need this service. Service Name: here";
+                Intent intent= new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(wpurl));
+                startActivity(intent);
             }
         });
+
+//      Whatsapp Intent
+
+//      Service Start Button
         ac_start_service_btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,8 +111,13 @@ public class ac_technician_fragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
+
+//      Service Start Button
+
         return callView;
     }
+
+//      Call Button Method
     private void makePhoneCall1() {
         String phoneNumber = "+923093112522";
         if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.CALL_PHONE)
@@ -130,33 +140,7 @@ public class ac_technician_fragment extends Fragment {
             startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
         }
     }
-    private void onWhatsappChat1() {
-        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-        try {
-            String toNumber = "+923078781017";
-            Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + "" + toNumber + "?body=" + ""));
-            sendIntent.setPackage("com.whatsapp");
-            startActivity(sendIntent);
-        } catch (Exception e) {
-            e.printStackTrace();
-            Toast.makeText(getActivity(), "For whatsapp-chat install simple-whatsapp", Toast.LENGTH_LONG).show();
-
-        }
-    }
-    private void onWhatsappChat2() {
-        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-        try {
-            String toNumber = "+923046809155";
-            Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + "" + toNumber + "?body=" + ""));
-            sendIntent.setPackage("com.whatsapp");
-            startActivity(sendIntent);
-        } catch (Exception e) {
-            e.printStackTrace();
-            Toast.makeText(getActivity(), "For whatsapp-chat install simple-whatsapp", Toast.LENGTH_LONG).show();
-
-        }
-    }
-
+//      Call Button Method
     @SuppressLint("MissingSuperCall")
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {

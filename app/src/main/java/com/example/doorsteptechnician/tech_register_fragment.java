@@ -14,8 +14,6 @@ public class tech_register_fragment extends Fragment {
     public tech_register_fragment() {
         // Required empty public constructor
     }
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

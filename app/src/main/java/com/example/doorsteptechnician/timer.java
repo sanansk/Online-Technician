@@ -17,38 +17,42 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 
 public class timer extends Fragment {
     ImageView clock_minute_hand;
     Animation round_anim;
-    Button start_task, end_task, cancel_service,complete_task;
+    Button start_task, end_task, cancel_service, complete_task;
     Chronometer chronometer;
     private boolean running;
+
     public timer() {
         // Required empty public constructor
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
+
     @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View callView=inflater.inflate(R.layout.fragment_timer, container, false);
+        View callView = inflater.inflate(R.layout.fragment_timer, container, false);
 
-        clock_minute_hand= callView.findViewById(R.id.clock_minute_hand);
-        start_task=callView.findViewById(R.id.start_task);
-        end_task=callView.findViewById(R.id.end_task);
-        complete_task=callView.findViewById(R.id.complete_task);
-        cancel_service=callView.findViewById(R.id.cancel_service);
-        chronometer= callView.findViewById(R.id.chronometer);
+        clock_minute_hand = callView.findViewById(R.id.clock_minute_hand);
+        start_task = callView.findViewById(R.id.start_task);
+        end_task = callView.findViewById(R.id.end_task);
+        complete_task = callView.findViewById(R.id.complete_task);
+        cancel_service = callView.findViewById(R.id.cancel_service);
+        chronometer = callView.findViewById(R.id.chronometer);
         //optional animation
         end_task.setAlpha(0);
 
-        round_anim= AnimationUtils.loadAnimation(getActivity(),R.anim.round_anim);
+        round_anim = AnimationUtils.loadAnimation(getActivity(), R.anim.round_anim);
 
         start_task.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +63,7 @@ public class timer extends Fragment {
                     end_task.animate().alpha(1).translationY(-65).setDuration(300).start();
                     chronometer.setBase(SystemClock.elapsedRealtime());
                     chronometer.start();
-                    running= true;
+                    running = true;
                 }
             }
         });
@@ -69,17 +73,17 @@ public class timer extends Fragment {
                 if (running) {
                     clock_minute_hand.clearAnimation();
                     chronometer.stop();
-                    running=false;
+                    running = false;
                 }
             }
         });
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        complete_task.setOnClickListener(new View.OnClickListener() {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            @Override
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            public void onClick(View v) {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Intent intent= new Intent(getActivity(),payment.class);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                startActivity(intent);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        });
+        complete_task.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), payment.class);
+                startActivity(intent);
+            }
+        });
         cancel_service.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

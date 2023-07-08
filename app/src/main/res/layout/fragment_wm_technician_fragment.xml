@@ -15,22 +15,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <androidx.appcompat.widget.Toolbar
                 android:id="@+id/wm_toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:background="@color/appcolor"
-                android:paddingStart="20dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:text="Washing Machine Technicians"
-                android:textColor="@color/white"
-                android:textSize="22dp"
-                android:textStyle="bold"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                tools:ignore="MissingConstraints,TextContrastCheck">
+                app:title="Washing Machine Technicians"
+                app:titleTextColor="@color/white"
+                tools:ignore="MissingConstraints">
 
-            </TextView>
+            </androidx.appcompat.widget.Toolbar>
 
             <ImageView
                 android:id="@+id/wm_tech_dashboard_img"
@@ -94,7 +89,7 @@
                                 android:layout_width="125dp"
                                 android:layout_height="147dp"
                                 android:layout_marginStart="4dp"
-                                app:srcCompat="@drawable/ac_tech1_img"
+                                app:srcCompat="@drawable/wm_tech1_img"
                                 tools:ignore="ContentDescription,ImageContrastCheck" />
 
                             <LinearLayout
@@ -194,39 +189,13 @@
                                 tools:ignore="TouchTargetSizeCheck" />
                         </LinearLayout>
 
-                        <LinearLayout
-                            android:id="@+id/wm_alert_txt1_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/wm_whatsapp_chat1_layout"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center">
-
-                            <ImageView
-                                android:id="@+id/wm_alert_img1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="8dp"
-                                android:src="@drawable/alert_vector" />
-
-                            <TextView
-                                android:id="@+id/wm_technician1.txt6"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/oswald_bold"
-                                android:gravity="center"
-                                android:text="Please save number to contacts, for whatsapp."
-                                android:textColor="@color/phone_number_color"
-                                android:textSize="14dp"
-                                tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
-                        </LinearLayout>
 
                         <LinearLayout
                             android:id="@+id/start_service_btn1_layout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/wm_alert_txt1_layout"
-                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/wm_whatsapp_chat1_layout"
+                            android:layout_marginTop="8dp"
                             android:gravity="center"
                             tools:ignore="DuplicateIds">
 
@@ -303,7 +272,7 @@
                                 android:layout_width="125dp"
                                 android:layout_height="147dp"
                                 android:layout_marginStart="4dp"
-                                app:srcCompat="@drawable/ac_tech2_img"
+                                app:srcCompat="@drawable/wm_tech2_img"
                                 tools:ignore="ContentDescription,ImageContrastCheck" />
 
                             <LinearLayout
@@ -403,38 +372,11 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/wm_alret_txt2_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/wm_whatsapp_chat2_layout"
-                            android:layout_marginTop="5dp"
-                            android:gravity="center">
-
-                            <ImageView
-                                android:id="@+id/wm_alret_img2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="8dp"
-                                android:src="@drawable/alert_vector" />
-
-                            <TextView
-                                android:id="@+id/wm_technician2.txt6"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/oswald_bold"
-                                android:gravity="center"
-                                android:text="Please save number to contacts, for whatsapp."
-                                android:textColor="@color/phone_number_color"
-                                android:textSize="14dp"
-                                tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TextContrastCheck" />
-                        </LinearLayout>
-
-                        <LinearLayout
                             android:id="@+id/start_service_btn2_layout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/wm_alret_txt2_layout"
-                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/wm_whatsapp_chat2_layout"
+                            android:layout_marginTop="8dp"
                             android:gravity="center"
                             tools:ignore="DuplicateIds">
 

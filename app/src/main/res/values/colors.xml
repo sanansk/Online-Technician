@@ -18,4 +18,6 @@
     <color name="whatsapp_btn_color">#128C7E</color>
     <color name="whatsapp_txt_color">#FFFFFFFF</color>
 
+    <color name="transparent">#00FFFFFF</color>
+
 </resources>

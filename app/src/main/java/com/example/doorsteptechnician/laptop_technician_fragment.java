@@ -28,8 +28,6 @@ public class laptop_technician_fragment extends Fragment {
     private static final int REQUEST_CALL_PHONE = 1;
     Button laptop_call_btn1,laptop_call_btn2, laptop_whatsapp_chat_btn1,laptop_whatsapp_chat_btn2;
     Button laptop_start_service_btn1, laptop_start_service_btn2;
-    TextView laptop_toolbar;
-    Animation side_animation;
     public laptop_technician_fragment() {
         // Required empty public constructor
     }
@@ -55,10 +53,6 @@ public class laptop_technician_fragment extends Fragment {
         laptop_start_service_btn1=callView.findViewById(R.id.laptop_start_service_btn1);
         laptop_start_service_btn2=callView.findViewById(R.id.laptop_start_service_btn2);
 
-        laptop_toolbar= callView.findViewById(R.id.laptop_toolbar);
-        side_animation= AnimationUtils.loadAnimation(getActivity(),R.anim.side_animation);
-        laptop_toolbar.setAnimation(side_animation);
-
         laptop_call_btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,18 +65,31 @@ public class laptop_technician_fragment extends Fragment {
                 makePhoneCall2();
             }
         });
+
+//      Whatsapp Intent
         laptop_whatsapp_chat_btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onWhatsappChat1();
+                String wpurl= "https://wa.me/+923037832324?text=Hi, I need this service. Service Name: here";
+                Intent intent= new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(wpurl));
+                startActivity(intent);
             }
         });
+
         laptop_whatsapp_chat_btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onWhatsappChat2();
+                String wpurl= "https://wa.me/+923006332639?text=Hi, I need this service. Service Name: here";
+                Intent intent= new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(wpurl));
+                startActivity(intent);
             }
         });
+
+//      Whatsapp Intent
+
+//      Service Start Button
         laptop_start_service_btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -103,8 +110,13 @@ public class laptop_technician_fragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
+
+//      Service Start Button
+
         return callView;
     }
+
+//      Call Button Method
     private void makePhoneCall1() {
         String phoneNumber = "+923027726646";
         if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.CALL_PHONE)
@@ -127,32 +139,8 @@ public class laptop_technician_fragment extends Fragment {
             startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
         }
     }
-    private void onWhatsappChat1() {
-        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-        try {
-            String toNumber = "+923027726646";
-            Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + "" + toNumber + "?body=" + ""));
-            sendIntent.setPackage("com.whatsapp");
-            startActivity(sendIntent);
-        } catch (Exception e) {
-            e.printStackTrace();
-            Toast.makeText(getActivity(), "For whatsapp-chat install simple-whatsapp", Toast.LENGTH_LONG).show();
 
-        }
-    }
-    private void onWhatsappChat2() {
-        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-        try {
-            String toNumber = "+923006332639";
-            Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + "" + toNumber + "?body=" + ""));
-            sendIntent.setPackage("com.whatsapp");
-            startActivity(sendIntent);
-        } catch (Exception e) {
-            e.printStackTrace();
-            Toast.makeText(getActivity(), "For whatsapp-chat install simple-whatsapp", Toast.LENGTH_LONG).show();
-
-        }
-    }
+    //      Call Button Method
     @SuppressLint("MissingSuperCall")
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
